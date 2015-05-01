@@ -1,4 +1,3 @@
-
 angular.module("snapSim", [])
   .controller("appController",
     function($scope){
@@ -37,11 +36,15 @@ angular.module("snapSim", [])
 
       $scope.checkout = function(){
         // Create a result
-        var foods = $scope.foods.filter(function(food){return food.qty && food.qty > 0});
+        if ($scope.moneyRemaining() > 0){
+          var foods = $scope.foods.filter(function(food){return food.qty && food.qty > 0});
 
-        var result = scoreFoods($scope.family, foods);
+          var result = scoreFoods($scope.family, foods);
 
-        $scope.result = result;
+          $scope.result = result;
+        } else {
+          alert("You don't have enough money!");
+        }
       };
 
       // Given a list of foods, return the results

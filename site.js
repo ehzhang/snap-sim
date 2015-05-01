@@ -37,7 +37,7 @@ angular.module("snapSim", [])
 
       $scope.checkout = function(){
         // Create a result
-        if (moneyRemaining > 0){
+        if ($scope.moneyRemaining > 0){
           var foods = $scope.foods.filter(function(food){return food.qty && food.qty > 0});
 
           var result = scoreFoods($scope.family, foods);

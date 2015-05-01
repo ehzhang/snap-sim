@@ -1,5 +1,7 @@
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <!-- Imports -->
     <!-- jQuery -->
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
@@ -54,7 +56,7 @@
                   <div class="item" ng-repeat="food in foods">
                     <div class="ui small input right floated">
                       ${{food.price}} &times; &nbsp;
-                      <input type="num"
+                      <input type="number"
                              placeholder="Quantity"
                              ng-model="food.qty">
                     </div>
@@ -102,12 +104,12 @@
                 </div>
 
                 <div>
-                  Calories: {{result.carbohydrates}} / {{result.carbohydratesRecommended}}
+                  Carbs: {{result.carbohydrates}} / {{result.carbohydratesRecommended}}
                   ({{(result.carbohydrates / result.carbohydratesRecommended) * 100 | number:2}}%)
                 </div>
 
                 <div>
-                  Calories: {{result.protein}} / {{result.proteinRecommended}}
+                  Protein: {{result.protein}} / {{result.proteinRecommended}}
                   ({{(result.protein / result.proteinRecommended) * 100 | number:2}}%)
                 </div>
 

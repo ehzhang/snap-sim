@@ -4,9 +4,6 @@ angular.module("snapSim", [])
 
       window.$s = $scope;
 
-      $scope.formUrl = "https://docs.google.com/forms/d/"
-        + "1rY5pMl5I9w7uxSnJTX6MQzilhXWls4HHvVTQv2rtw1w/viewform?usp=send_form"
-
       // Get the foods as json data
       $.getJSON("foods.json", function(data){
         $scope.foods = data;

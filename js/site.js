@@ -81,6 +81,11 @@ angular.module("snapSim", [])
           totals.score += 25 * Math.abs(totals[k] - recommended)/recommended;
         }
 
+        // Modify the score so that 0 = bad, 100 = good. This may lose information, but it will
+        // be more intuitive to the user.
+        totals.score = 100 - totals.score;
+        totals.score = Math.max(Math.min(totals.score, 100), 0);
+
         return totals;
       }
 

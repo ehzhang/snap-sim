@@ -30,6 +30,22 @@
         <div class="ui stackable eight wide centered page grid">
           <div class="eight wide column">
             <div id="start">
+              <div id="rules" ng-hide="result">
+                <p>
+                  Your goal is to buy a <strong>healthy</strong> meal for your 
+                  family while staying within <strong>budget</strong>.
+                </p>
+                <p>
+                Only buy what you need. If you have <strong>leftover money</strong>, that's <strong>good</strong>.
+                </p>
+                <p>
+                Enter <strong>how many</strong> of each item you want.
+                </p>
+                <p>
+                Use <strong>fractional amounts</strong>, like 0.5 or 0.25, if needed.
+                </p>
+                <br>
+              </div>
               <button class="ui button"
                       ng-hide="family"
                       ng-click="createFamily()">Get Started</button>
@@ -115,7 +131,7 @@
 
 
               </div>
-              <a id="form_link" class="ui fluid green button" ng-href="https://docs.google.com/forms/d/1rY5pMl5I9w7uxSnJTX6MQzilhXWls4HHvVTQv2rtw1w/viewform?entry.514302214={{family.snap + family.money}}&entry.789855753={{family.size}}&entry.1749449689={{result.score}}&entry.1449103532&entry.1978990055" target="_blank">How Did I Do?<a>
+              <a id="form_link" class="ui fluid green button" ng-href="https://docs.google.com/forms/d/1rY5pMl5I9w7uxSnJTX6MQzilhXWls4HHvVTQv2rtw1w/viewform?entry.514302214={{family.snap + family.money}}&entry.789855753={{family.size}}&entry.1749449689={{result.score}}&entry.609364912={{moneyRemaining()}}&entry.1449103532&entry.1317149081&entry.1978990055" target="_blank">How Did I Do?<a>
               <button class="ui fluid green button" ng-click="reset()">Play again?</button>
             </div>
 

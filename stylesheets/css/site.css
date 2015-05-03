@@ -42,3 +42,7 @@ body .container {
 #result .segment{
   text-align: center;
 }
+
+#form_link {
+  margin-bottom: 5px;
+}

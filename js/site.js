@@ -2,8 +2,6 @@ angular.module("snapSim", [])
   .controller("appController",
     function($scope){
 
-      window.$s = $scope;
-
       // Get the foods as json data
       $.getJSON("foods.json", function(data){
         $scope.foods = data;
@@ -36,7 +34,7 @@ angular.module("snapSim", [])
 
       $scope.checkout = function(){
         // Create a result
-        if ($scope.moneyRemaining() > 0){
+        if ($scope.moneyRemaining() >= 0){
           var foods = $scope.foods.filter(function(food){return food.qty && food.qty > 0});
 
           var result = scoreFoods($scope.family, foods);

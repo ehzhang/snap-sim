@@ -1,0 +1,34 @@
+{
+  "story": [
+    {
+      "description": "You enter Greenshop to buy groceries for the week. After entering, you grab a shopping cart and make your way into the dairy section",
+      "items": [
+        {
+          "name": "Whole milk",
+          "description": "A gallon of Greenshop-brand whole milk",
+          "price": 1.29,
+          "notes": "Kids need the calcium and vitamin D in milk."
+        },
+        {
+          "name": "Yogurt",
+          "description": "6-pack of 'Danimals' yogurt cups",
+          "price": 2.00,
+          "notes": "It's not as healthy as organic greek yogurt, but the kids need something for their snack time at school. The past few weeks, they haven't been taking anything."
+        },
+        {
+          "name": "Greek Yogurt",
+          "description": "Organic, greek yogurt",
+          "price": 5.00,
+          "notes": "Protein rich - a healthy option for the childens' snacktime at school"
+        }
+      ]
+    },
+    {
+      "description": "You've entered the frozen food isle. On one hand, there are frozen dinners, and on the other, there are frozen vegetables",
+      "items": [
+        {
+        }
+      ]
+    }
+  ]
+}
